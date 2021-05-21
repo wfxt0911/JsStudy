@@ -1,0 +1,55 @@
+/* 声明清除浮动的样式 */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ie6 7 专门清除浮动的样式*/
+
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    background-color: rgb(102, 102, 102);
+}
+
+.box {
+    margin: 0 300px;
+    background-color: rgb(247, 247, 247);
+    width: 800px;
+}
+
+#tab {
+    padding-top: 3px;
+    padding-left: 3px;
+    width: 100%;
+    border-bottom: 1px solid rgb(228, 57, 60);
+}
+
+.tabList {
+    float: left;
+    height: 40px;
+    width: 100px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(102, 102, 102);
+    line-height: 40px;
+    /* font-weight: bold; */
+    text-align: center;
+}
+
+.tacListChange {
+    background-color: rgb(228, 57, 60);
+    color: rgb(247, 247, 247);
+}
+
+.item {
+    display: none;
+}

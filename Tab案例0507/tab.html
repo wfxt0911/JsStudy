@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tab学习</title>
+    <link rel="stylesheet" href="common.css">
+    <!-- <script src="common.js"></script> -->
+</head>
+
+<body>
+    <div class="box">
+        <div id="tab" class="clearfix">
+            <div class="tabList" style=" background-color: rgb(228, 57, 60);color: rgb(247, 247, 247);">商品详情</div>
+            <div class="tabList">商品规格</div>
+            <div class="tabList">商品售后</div>
+            <div class="tabList">商品说明书</div>
+            <div class="tabList">商品评价</div>
+        </div>
+        <div class="message">
+            <div class="item" style="display:block;">品牌： 小米（MI）</div>
+            <div class="item">运行内存：4GB</div>
+            <div class="item">售后服务电话：400-100-5678</div>
+            <div class="item">右侧按钮为指纹加电源键</div>
+            <div class="item">这款手机真的很不错，性价比很高，手机颜值也很高，运行速度快</div>
+        </div>
+    </div>
+</body>
+<script>
+    var tabLists = document.getElementsByClassName('tabList');
+    var items = document.getElementsByClassName('item');
+    var index = 0;
+    for (var i = 0; i < tabLists.length; i++) {
+        tabLists[i].setAttribute('index', i);
+        tabLists[i].onmouseover = function() {
+            this.style.color = 'rgb(228, 57, 60)';
+            this.style.fontWeight = 'bold';
+            tabLists[index].style.color = 'rgb(247, 247, 247)';
+        }
+        tabLists[i].onmouseout = function() {
+            this.style.color = 'rgb(102, 102, 102)';
+            this.style.fontWeight = 'normal';
+        }
+        tabLists[i].onclick = function() {
+            index = this.getAttribute('index');
+            for (var i = 0; i < tabLists.length; i++) {
+                tabLists[i].removeAttribute('style');
+                tabLists[i].className = 'tabList';
+                items[i].style.display = 'none';
+            }
+
+            this.className = "tabList " + "tacListChange";
+
+            items[index].style.display = 'block';
+
+        }
+    }
+    for (var i = 0; i < items.length; i++) {
+        items[i].setAttribute('index', i);
+    }
+</script>
+
+</html>
