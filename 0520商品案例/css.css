@@ -1,0 +1,82 @@
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.search>div {
+    float: left;
+    width: 100px;
+    height: 40px;
+    border-right: 3px solid #ff5b00;
+    font-size: 18px;
+    background-color: #ff5b00;
+    color: #ffffff;
+}
+
+.search>input {
+    float: left;
+    width: 397px;
+    height: 38px;
+    border: none;
+}
+
+.search>button {
+    float: left;
+    background-color: #ff5b00;
+    color: #ffffff;
+    width: 100px;
+    height: 40px;
+    padding: 0 0;
+    border: none;
+    margin: 0 0;
+    font-size: 18px;
+    outline: none;
+}
+
+.search>button:hover {
+    color: black;
+}
+
+.header {
+    width: 600px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    border: 3px solid #ff5b00;
+}
+
+.search {
+    height: 40px;
+}
+
+.item {
+    display: none;
+    margin-top: 3px;
+    border: 1px solid #cccccc;
+}
+
+.itemList {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    /* width: 100%; */
+}
+
+.itemList:hover {
+    background-color: #cccccc;
+}
